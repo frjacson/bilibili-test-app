@@ -4,10 +4,26 @@
     align-items: center; 
     justify-content: space-around;
     height: 56px;
-    
+
     li {
+      position: relative;
       color: white;
       list-style: none;
+
+      .line {
+        position: absolute;
+        left: 50%;
+        bottom: -8px;
+        transform: translatex(-50%);
+        height: 4px;
+        width: 100%;
+        background-color: aqua;
+        opacity: 0;
+        transition: opacity .3s;
+        &.visible {
+          opacity: 1;
+        }
+      }
     }
   }
 
